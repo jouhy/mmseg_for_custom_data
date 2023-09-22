@@ -9,3 +9,12 @@ model = dict(
         channels=128,
     ),
     auxiliary_head=dict(in_channels=256, channels=64))
+
+
+default_hooks = dict(
+    timer=dict(type='IterTimerHook'),
+    logger=dict(type='LoggerHook', interval=50, log_metric_by_epoch=False),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    checkpoint=dict(type='CheckpointHook', save_best = 'mIoU', by_epoch=False, interval=8000),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    visualization=dict(type='SegVisualizationHook'))
