@@ -438,6 +438,20 @@ def bdd100k_palette():
             [255, 0, 0], [0, 0, 142], [0, 0, 70], [0, 60, 100], [0, 80, 100],
             [0, 0, 230], [119, 11, 32]]
 
+def cida_classes():
+    return [
+        'Road', 'Sidewalk', 'Construction', 'Fence', 'Pole',
+        'Traffic Light', 'Traffic Sign', 'Nature', 'Sky', 'Person',
+        'Rider', 'Car'
+    ]
+
+def cida_palette():
+    return [
+        [128, 64, 128], [244, 35, 232], [70, 70, 70], [190, 153, 153], [153, 153, 153],
+        [250, 170, 30], [220, 220, 0], [107, 142, 35], [70, 130, 180], [220, 20, 60],
+        [255, 0, 0], [0, 0, 142]
+    ]
+
 
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
@@ -456,7 +470,8 @@ dataset_aliases = {
     'lip': ['LIP', 'lip'],
     'mapillary_v1': ['mapillary_v1'],
     'mapillary_v2': ['mapillary_v2'],
-    'bdd100k': ['bdd100k']
+    'bdd100k': ['bdd100k'],
+    'cida' : ['cida']
 }
 
 
